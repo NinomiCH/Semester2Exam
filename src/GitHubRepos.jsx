@@ -25,7 +25,7 @@ const GitHubRepos = () => {
           q: search,
         },
         headers: {
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer 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`,
         },
       });
       setRepos(response.data);
@@ -43,7 +43,7 @@ const GitHubRepos = () => {
     try {
       await axios.post(`https://api.github.com/user/repos`, newRepoData, {
         headers: {
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer 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`,
         },
       });
       setNewRepoData({ name: "", description: "" });
@@ -63,7 +63,7 @@ const GitHubRepos = () => {
     try {
       await axios.delete(`https://api.github.com/repos/${repoId}`, {
         headers: {
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer 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`,
         },
       });
       fetchRepos();
